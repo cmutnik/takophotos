@@ -7,7 +7,7 @@ t a k o p h o t o s
 ----------
 ### Usage ###
 
-** Before you begin: Change the URL and the BASEURL as well as the internal nav links in the `_config.yml` **
+**Before you begin: Change the URL and the BASEURL as well as the internal nav links in the `_config.yml`**
 
 The **URL** should say `https://yourusername.github.io`
 
