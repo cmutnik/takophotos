@@ -1,0 +1,133 @@
+<!-- Footer -->
+<footer>
+    <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+    
+                    <ul class="list-inline text-center">
+    
+                        <!-- {% if site.facebook_username %}
+                        <li>
+                            <a href="https://facebook.com/{{ site.facebook_username }}" data-toggle="tooltip" title="Facebook">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        {% endif %} -->
+                        <!-- {% if site.twitter_username %}
+                        <li>
+                            <a href="https://twitter.com/{{ site.twitter_username }}" data-toggle="tooltip" title="Twitter">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        {% endif %} -->
+                        {% if site.instagram_username %}
+                        <li>
+                            <a href="https://instagram.com/{{ site.instagram_username }}" data-toggle="tooltip" title="Instagram">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        {% endif %}
+                        {% if site.instagram_username_nft %}
+                        <li>
+                            <a href="https://instagram.com/{{ site.instagram_username_nft }}" data-toggle="tooltip" title="InstagramNFT">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-camera-retro fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        {% endif %}
+                        {% if site.other_url_passed %}
+                        <li>
+                            <a href="https://{{ site.other_url_passed }}" data-toggle="tooltip" title="codepencodepen">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-codepen fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        {% endif %}
+                        {% if site.opensea_collection1 %}
+                        <li>
+                            <a href="https://opensea.io/collection/{{ site.opensea_collection1 }}">
+                                <span class="fa-stack fa-lg" data-toggle="tooltip" title="flaskscience">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-flask fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        {% endif %}
+                        {% if site.opensea_collection2 %}
+                        <li>
+                            <a href="https://opensea.io/collection/{{ site.opensea_collection2 }}" style="color:#d00808">
+                                <!-- <a href="https://opensea.io/collection/{{ site.opensea_collection2 }}"> -->
+                                <span class="fa-stack fa-lg" data-toggle="tooltip" title="fighterjet">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-fighter-jet fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        {% endif %}
+                        {% if site.other_site_anti %}
+                        <li>
+                            <a href="https://{{ site.other_site_anti }}" target="_blank" style="color:#d00808" title="eyedropper">
+                                <span class="fa-stack fa-lg" data-toggle="tooltip" title="eyedropper">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-eyedropper fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        {% endif %}
+                        {% if site.github_username %}
+                        <li>
+                            <a href="https://github.com/{{ site.github_username }}" data-toggle="tooltip" title="Github">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        {% endif %}
+                        <!-- {% if site.other_url_passed %}
+                        <li>
+                            <a href="https://takophotos.darkroom.tech/" data-toggle="tooltip" title="Darkroomtech">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-flickr fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        {% endif %} -->
+                <li>
+        <a href="mailto:{{ site.email }}" data-toggle="tooltip" target="_blank" title="Email">
+                           <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+    </span>
+              </a> </li>
+    
+             <!-- <li>
+                            <a href="{{ "/feed.xml" | prepend: site.baseurl }}" data-toggle="tooltip" title="Feed">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li> -->
+                    </ul>
+                    <p class="copyright text-muted">Copyright &copy; {{ site.title }} {{ site.time | date: '%Y' }}</p>
+    <!-- <center><h6><p>Powered by <a href="https://github.com/jekyll/">Jekyll</a>.</p></h6></center> -->
+                </div>
+            </div>
+        </div>
+    </footer>
+    

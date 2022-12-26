@@ -1,0 +1,159 @@
+---
+layout: page
+title: "Honu"
+description: "Honu Means Turtle"
+active: gallery
+header-img: "img/galleries/backgrounds/DB9A3248_resized.webp"
+album-title: "Relax bro"
+images:
+ - image_path: /img/galleries/gallery10_honu/20210610_143845_046_resized.webp
+   caption: Turtle or table?
+   mfp-title: Tabletopping
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery10_honu/DB9A7607_resized.webp
+   caption: Coming up for air
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery10_honu/DB9A2772_resized.webp
+   caption: Flapping along
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery10_honu/DB9A3248_resized.webp
+   caption: Most people take a submarine to the canyon
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery10_honu/GC6A5920_resized.webp
+   caption: So dramatic
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery10_honu/GC6A6079_resized.webp
+   caption: Baby guy
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery10_honu/GC6A9596_resized.webp
+   caption: Just passing by
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery10_honu/DB9A1021_resized.webp
+   caption: Silhouette
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery10_honu/db9a1315_resized.webp
+   caption: Surface dwelling
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery10_honu/DB9A3934_resized.webp
+   caption: Floating up for air
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery10_honu/DB9A9335_resized.webp
+   caption: From below
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery10_honu/DB9A9359_resized.webp
+   caption: Sunbathing
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery10_honu/DB9A2636_resized.webp
+   caption: Lazy days
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery10_honu/DB9A3152_resized.webp
+   caption: Dropping in
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery10_honu/DB9A4002_resized.webp
+   caption: Sand bed
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery10_honu/DB9A4045_resized.webp
+   caption: Waiting for the sun
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery10_honu/DB9A4235_resized.webp
+   caption: Who is she
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery10_honu/DB9A4887_resized.webp
+   caption: Dive, dive, dive
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery10_honu/DB9A4983_resized.webp
+   caption: Buddy system
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery10_honu/DB9A7038_resized.webp
+   caption: Striking a pose
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery10_honu/DB9A9322_resized.webp
+   caption: Big-boi
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery10_honu/electric-beach-turtle-3_resized.webp
+   caption: Solo ride
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery10_honu/IMG_2060_resized.webp
+   caption: Talk to the flipper
+   copyright: © takophotos
+---
+
+<html class="no-js" lang="en">
+<head>
+	<meta content="charset=utf-8">
+</head>
+
+    <body>
+ 
+	<section id="content" role="main">
+		<div class="wrapper">
+	<br><br>
+			<h2>{{page.album-title}}</h2>
+
+
+			<!-- Gallery __-->
+			<div class="gallery masonry-gallery">
+		
+{% for image in page.images %}  		
+
+				<figure class="gallery-item">
+					<header class='gallery-icon'>
+
+<a href="{{ site.url }}{{ site.baseurl }}{{ image.image_path }}" class="popup" title="{{ image.caption }}" data-caption="{{ image.copyright }}">
+<img src="{{ site.url }}{{ site.baseurl }}{{ image.image_path }}"></a>
+						
+					</header>	
+					<figcaption class='gallery-caption'>
+						<div class="entry-summary">
+							<h3>{{image.caption}}</h3>
+							<p>{{image.copyright}}</p>
+						</div>
+					</figcaption>
+				</figure>
+				
+{% endfor %}
+
+			</div>
+
+		</div><!-- END .wrapper -->
+	</section>
+
+<!-- jQuery -->    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<!-- include image popups -->
+<script src="{{ site.baseurl }}/js/jquery.magnific-popup.js"></script>
+<script src="{{ site.baseurl }}/js/retina.min.js"></script>
+<!-- include Masonry -->
+<script src="{{ site.baseurl }}/js/isotope.pkgd.min.js"></script> 
+<!-- include mousewheel plugins -->
+<script src="{{ site.baseurl }}/js/jquery.mousewheel.min.js"></script>
+<!-- include carousel plugins -->
+<script src="{{ site.baseurl}}/js/jquery.tinycarousel.min.js"></script>
+<!-- include svg line drawing plugin -->
+<script src="{{ site.baseurl }}/js/jquery.lazylinepainter.min.js"></script>
+<!-- include custom script -->
+<script src="{{ site.baseurl }}/js/scripts.js"></script>
+<!-- Modernizr -->
+ <script src="{{ site.baseurl }}/js/modernizr.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function($) {
+        $('a.popup').magnificPopup({
+          type: 'image',
+	  gallery:{
+         enabled:true,
+         navigateByImgClick: true,
+         preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+       },
+      image: {
+         titleSrc: function(item) {
+              return item.el.attr('title') + '&nbsp;' + item.el.attr('data-caption');
+            }
+        }
+          // other options
+      });
+});
+    </script>
+
+</body></html>

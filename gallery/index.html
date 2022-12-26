@@ -1,0 +1,119 @@
+---
+layout: page
+title: "Gallery"
+description: "Photography Archive"
+active: gallery
+header-img: "img/galleries/backgrounds/IMG_8432_resized.webp"
+album-title: "Albums"
+images:
+ - image_path: /img/galleries/albums/album01.webp
+   gallery-folder: /gallery/gallery01/
+   gallery-name: Big Island
+   gallery-date: November 2021
+ - image_path: /img/galleries/albums/album02.webp
+   gallery-folder: /gallery/gallery02/
+   gallery-name: Thailand
+   gallery-date: October 2019
+ - image_path: /img/galleries/albums/album03.webp
+   gallery-folder: /gallery/gallery03/
+   gallery-name: China Walls
+   gallery-date: May 2013
+ - image_path: /img/galleries/albums/album04.webp
+   gallery-folder: /gallery/gallery04/
+   gallery-name: Waterfalls
+   gallery-date: July 2020
+ - image_path: /img/galleries/albums/album05.webp
+   gallery-folder: /gallery/gallery05/
+   gallery-name: Painting with Light
+   gallery-date: September 2021
+ - image_path: /img/galleries/albums/album06.webp
+   gallery-folder: /gallery/gallery06/
+   gallery-name: Riding the Wave
+   gallery-date: October 2021
+ - image_path: /img/galleries/albums/album07.webp
+   gallery-folder: /gallery/gallery07/
+   gallery-name: Main Land
+   gallery-date: January 2015
+ - image_path: /img/galleries/albums/album08.webp
+   gallery-folder: /gallery/gallery08/
+   gallery-name: Astrophotography
+   gallery-date: December 2014
+ - image_path: /img/galleries/albums/album09.webp
+   gallery-folder: /gallery/gallery09/
+   gallery-name: Island Life
+   gallery-date: November 2014
+ - image_path: /img/galleries/albums/album10.webp
+   gallery-folder: /gallery/gallery10/
+   gallery-name: Honu
+   gallery-date: December 2014
+ - image_path: /img/galleries/albums/album11.webp
+   gallery-folder: /gallery/gallery11/
+   gallery-name: Sharks
+   gallery-date: January 2015
+---
+
+<html class="no-js" lang="en">
+<head>
+	<meta content="charset=utf-8">
+    <link rel="stylesheet" href="{{ "/css/selena.css" | prepend: site.baseurl }}">
+</head>
+
+
+    <body class="gallery">
+ 
+	<section id="content" role="main">
+		<div class="wrapper">
+	
+			<h2>{{page.title}}</h2>
+			
+			<!-- Gallery __-->
+			<div class="gallery masonry-gallery">
+				
+{% for image in page.images %}  	
+
+	               <figure class="gallery-item">
+                         <figure class="effect-selena">
+					<header class='gallery-icon'>
+		       
+<a href="{{ site.url }}{{ site.baseurl }}{{ image.gallery-folder }}">
+<img src="{{ site.url }}{{ site.baseurl }}{{ image.image_path }}"></a>
+
+					</header>	
+					<figcaption class='gallery-caption'>
+						<div class="entry-summary">
+							<h3>{{image.gallery-name}}</h3>
+							<p>{{image.gallery-date}}</p>
+						</div>
+					</figcaption>
+                       </figure>
+				</figure>
+							
+{% endfor %}		
+				
+			</div>
+			
+		</div><!-- END .wrapper -->
+	</section>
+
+<!-- 
+<br>
+<h6><p>Image Source: <a href="https://unsplash.com/photos/YOT6kS8YtEA/">Unsplash</a></p></h6> -->
+
+<!-- jQuery -->    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="{{ site.baseurl }}/js/retina.min.js"></script>
+<!-- include Masonry -->
+<script src="{{ site.baseurl }}/js/isotope.pkgd.min.js"></script> 
+<!-- include mousewheel plugins -->
+<script src="{{ site.baseurl }}/js/jquery.mousewheel.min.js"></script>
+<!-- include carousel plugins -->
+<script src="{{ site.baseurl}}/js/jquery.tinycarousel.min.js"></script>
+<!-- include svg line drawing plugin -->
+<script src="{{ site.baseurl }}/js/jquery.lazylinepainter.min.js"></script>
+<!-- include custom script -->
+<script src="{{ site.baseurl }}/js/scripts.js"></script>
+<!-- Modernizr -->
+ <script src="{{ site.baseurl }}/js/modernizr.js"></script>
+
+</body></html>

@@ -1,0 +1,141 @@
+---
+layout: page
+title: "Waterfalls"
+description: "Slow is smooth and smooth is fast"
+active: gallery
+header-img: "img/galleries/backgrounds/DB9A3786_resized.webp"
+album-title: "From Tropical to Arctic"
+images:
+ - image_path: /img/galleries/gallery04_waterfalls/DB9A2871_aurorahdr_resized.webp
+   caption: Ice Ponds
+   mfp-title: Now illegal
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery02_thailand/DB9A0168_resized.webp
+   caption: Shroomin
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery02_thailand/DB9A0135_resized.webp
+   caption: Slippery when wet
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery04_waterfalls/DB9A3786_resized.webp
+   caption: Wide-angle boiling
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery04_waterfalls/DB9A2864_resized.webp
+   caption: Ice Ponds
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery04_waterfalls/GC6A0158_resized.webp
+   caption: Never hurts to bring a model
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery04_waterfalls/DSC_0442_resized.webp
+   caption: Looking up
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery04_waterfalls/DB9A2004_resized.webp
+   caption: Kauai
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery04_waterfalls/DB9A3665_resized.webp
+   caption: Boiling Pots
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery04_waterfalls/DB9A3463_resized.webp
+   caption: NC
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery04_waterfalls/DB9A5282_resized.webp
+   caption: Mountain-man returns
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery04_waterfalls/DB9A4964_tonemapped_resized.webp
+   caption: Mermaiding
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery04_waterfalls/DB9A9566_resized.webp
+   caption: NY
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery04_waterfalls/DB9A7685_6_7_tonemapped_resized.webp
+   caption: Wifey
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery04_waterfalls/IMG_3839_resized.webp
+   caption: Ryguykauai
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery04_waterfalls/IMG_3842_resized.webp
+   caption: Ryguykauai
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery04_waterfalls/DB9A1616_resized.webp
+   caption: Classic
+   copyright: © takophotos
+---
+
+<html class="no-js" lang="en">
+<head>
+	<meta content="charset=utf-8">
+</head>
+
+    <body>
+ 
+	<section id="content" role="main">
+		<div class="wrapper">
+	<br><br>
+			<h2>{{page.album-title}}</h2>
+
+
+			<!-- Gallery __-->
+			<div class="gallery masonry-gallery">
+		
+{% for image in page.images %}  		
+
+				<figure class="gallery-item">
+					<header class='gallery-icon'>
+
+<a href="{{ site.url }}{{ site.baseurl }}{{ image.image_path }}" class="popup" title="{{ image.caption }}" data-caption="{{ image.copyright }}">
+<img src="{{ site.url }}{{ site.baseurl }}{{ image.image_path }}"></a>
+						
+					</header>	
+					<figcaption class='gallery-caption'>
+						<div class="entry-summary">
+							<h3>{{image.caption}}</h3>
+							<p>{{image.copyright}}</p>
+						</div>
+					</figcaption>
+				</figure>
+				
+{% endfor %}
+
+			</div>
+
+		</div><!-- END .wrapper -->
+	</section>
+
+<!-- jQuery -->    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<!-- include image popups -->
+<script src="{{ site.baseurl }}/js/jquery.magnific-popup.js"></script>
+<script src="{{ site.baseurl }}/js/retina.min.js"></script>
+<!-- include Masonry -->
+<script src="{{ site.baseurl }}/js/isotope.pkgd.min.js"></script> 
+<!-- include mousewheel plugins -->
+<script src="{{ site.baseurl }}/js/jquery.mousewheel.min.js"></script>
+<!-- include carousel plugins -->
+<script src="{{ site.baseurl}}/js/jquery.tinycarousel.min.js"></script>
+<!-- include svg line drawing plugin -->
+<script src="{{ site.baseurl }}/js/jquery.lazylinepainter.min.js"></script>
+<!-- include custom script -->
+<script src="{{ site.baseurl }}/js/scripts.js"></script>
+<!-- Modernizr -->
+ <script src="{{ site.baseurl }}/js/modernizr.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function($) {
+        $('a.popup').magnificPopup({
+          type: 'image',
+	  gallery:{
+         enabled:true,
+         navigateByImgClick: true,
+         preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+       },
+      image: {
+         titleSrc: function(item) {
+              return item.el.attr('title') + '&nbsp;' + item.el.attr('data-caption');
+            }
+        }
+          // other options
+      });
+});
+    </script>
+
+</body></html>

@@ -1,0 +1,19 @@
+{
+  "name": "takophotos",
+  "description": "Photo Portfolio",
+  "main": "index.html",
+  "moduleType": [],
+  "authors": [
+    "Tako"
+  ],
+  "license": "Apache-2.0",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

@@ -1,0 +1,147 @@
+---
+layout: page
+title: "Oahu"
+description: "Island Life"
+active: gallery
+header-img: "img/galleries/backgrounds/DB9A3649_resized.webp"
+album-title: "Someone has to live it..."
+images:
+ - image_path: /img/galleries/gallery09_island_life/tako_resized.webp
+   caption: Tako time with John
+   mfp-title: It took a fat swim
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery09_island_life/mountain_resized.webp
+   caption: Mountain man
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery09_island_life/IMG_20220222_135124_550_resized.webp
+   caption: Flying underwater
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery09_island_life/IMG_20211001_103301_346_resized.webp
+   caption: Nudibranch
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery09_island_life/GC6A5891_resized.webp
+   caption: Oh, Kelli
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery09_island_life/GC6A0042_resized.webp
+   caption: Throw in some greens
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery09_island_life/DB9A9868_resized.webp
+   caption: Nap time with a Hawaiian Monk Seal
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery09_island_life/dolphins_IMG_20210830_180103_770.webp
+   caption: Morning swim
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery09_island_life/DB9A7963_resized.webp
+   caption: Honeymoon
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery09_island_life/DB9A9251_resized.webp
+   caption: Quality time with Junior
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery09_island_life/DB9A3376_resized.webp
+   caption: Dinner
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery09_island_life/DB9A3649_resized.webp
+   caption: Spotted eagle ray
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery09_island_life/DB9A9246_resized.webp
+   caption: Jetting off
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery09_island_life/blowhole_monk_seal_6_resized.webp
+   caption: Chillen
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery09_island_life/DB9A4381_resized.webp
+   caption: Hiking mountains before sunrise
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery09_island_life/IMG_3586_resized.webp
+   caption: Secret beach
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery09_island_life/IMG_4930_resized.webp
+   caption: Surfs-up
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery09_island_life/blowhole_resized.webp
+   caption: Mood
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery09_island_life/20151230_174030_resized.webp
+   caption: Oh, Marie
+   copyright: © takophotos
+---
+
+<html class="no-js" lang="en">
+<head>
+	<meta content="charset=utf-8">
+</head>
+
+    <body>
+ 
+	<section id="content" role="main">
+		<div class="wrapper">
+	<br><br>
+			<h2>{{page.album-title}}</h2>
+
+
+			<!-- Gallery __-->
+			<div class="gallery masonry-gallery">
+		
+{% for image in page.images %}  		
+
+				<figure class="gallery-item">
+					<header class='gallery-icon'>
+
+<a href="{{ site.url }}{{ site.baseurl }}{{ image.image_path }}" class="popup" title="{{ image.caption }}" data-caption="{{ image.copyright }}">
+<img src="{{ site.url }}{{ site.baseurl }}{{ image.image_path }}"></a>
+						
+					</header>	
+					<figcaption class='gallery-caption'>
+						<div class="entry-summary">
+							<h3>{{image.caption}}</h3>
+							<p>{{image.copyright}}</p>
+						</div>
+					</figcaption>
+				</figure>
+				
+{% endfor %}
+
+			</div>
+
+		</div><!-- END .wrapper -->
+	</section>
+
+<!-- jQuery -->    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<!-- include image popups -->
+<script src="{{ site.baseurl }}/js/jquery.magnific-popup.js"></script>
+<script src="{{ site.baseurl }}/js/retina.min.js"></script>
+<!-- include Masonry -->
+<script src="{{ site.baseurl }}/js/isotope.pkgd.min.js"></script> 
+<!-- include mousewheel plugins -->
+<script src="{{ site.baseurl }}/js/jquery.mousewheel.min.js"></script>
+<!-- include carousel plugins -->
+<script src="{{ site.baseurl}}/js/jquery.tinycarousel.min.js"></script>
+<!-- include svg line drawing plugin -->
+<script src="{{ site.baseurl }}/js/jquery.lazylinepainter.min.js"></script>
+<!-- include custom script -->
+<script src="{{ site.baseurl }}/js/scripts.js"></script>
+<!-- Modernizr -->
+ <script src="{{ site.baseurl }}/js/modernizr.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function($) {
+        $('a.popup').magnificPopup({
+          type: 'image',
+	  gallery:{
+         enabled:true,
+         navigateByImgClick: true,
+         preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+       },
+      image: {
+         titleSrc: function(item) {
+              return item.el.attr('title') + '&nbsp;' + item.el.attr('data-caption');
+            }
+        }
+          // other options
+      });
+});
+    </script>
+
+</body></html>

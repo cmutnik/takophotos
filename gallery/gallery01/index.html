@@ -1,0 +1,113 @@
+---
+layout: page
+title: "Hawai`i"
+description: "Swung through the active Pahoehoe [lava fields] on our way to the beach, after leaving the snow-covered telescope.  No bathroom breaks needed."
+active: gallery
+header-img: "img/galleries/backgrounds/DB9A3951_resized.webp"
+album-title: "Big Island"
+images:
+ - image_path: /img/galleries/gallery01_big_island/DB9A9887_resized.webp
+   caption: Pahoehoe Flow
+   mfp-title: You can walk on this, just ask Trey...
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery02_thailand/20190910_172603_resized.webp
+   caption: How did Thailand get in here
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery01_big_island/IMG-20211209-WA0018_resized.webp
+   caption: Milkyway lava, Galactic Bulge.
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery01_big_island/DB9A3786_resized.webp
+   caption: Peepee Falls and Boiling Pots
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery01_big_island/DB9A3594_resized.webp
+   caption: Cave life
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery01_big_island/DB9A3963_resized.webp
+   caption: No edits needed.
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery01_big_island/GOPR9242_resized.webp
+   caption: Manta ray night diving
+   copyright: © takophotos
+---
+
+<html class="no-js" lang="en">
+<head>
+	<meta content="charset=utf-8">
+</head>
+
+    <body>
+ 
+	<section id="content" role="main">
+		<div class="wrapper">
+	<br><br>
+			<h2>{{page.album-title}}</h2>
+
+
+			<!-- Gallery __-->
+			<div class="gallery masonry-gallery">
+		
+{% for image in page.images %}  		
+
+				<figure class="gallery-item">
+					<header class='gallery-icon'>
+
+<a href="{{ site.url }}{{ site.baseurl }}{{ image.image_path }}" class="popup"  title="{{ image.caption }}" data-caption="{{ image.copyright }}">
+<img src="{{ site.url }}{{ site.baseurl }}{{ image.image_path }}"></a>
+						
+					</header>	
+					<figcaption class='gallery-caption'>
+						<div class="entry-summary" id="{{ image.caption }}">
+							<h3>{{image.caption}}</h3>
+							<p>{{image.copyright}}</p>
+						</div>
+					</figcaption>
+				</figure>
+				
+{% endfor %}
+
+			</div>
+
+		</div><!-- END .wrapper -->
+	</section>
+
+<!-- jQuery -->    
+
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<!-- include image popups -->
+<script src="{{ site.baseurl }}/js/jquery.magnific-popup.js"></script>
+
+<script type="text/javascript">
+      $(document).ready(function($) {
+        $('a.popup').magnificPopup({
+         type: 'image',
+	  gallery:{
+         enabled:true,
+         navigateByImgClick: true,
+         preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+       },
+image: {
+      titleSrc: function(item) {
+              return item.el.attr('title') + '&nbsp;' + item.el.attr('data-caption');
+            }
+        }
+          // other options
+      });
+});
+    </script>
+
+<script src="{{ site.baseurl }}/js/retina.min.js"></script>
+<!-- include Masonry -->
+<script src="{{ site.baseurl }}/js/isotope.pkgd.min.js"></script> 
+<!-- include mousewheel plugins -->
+<script src="{{ site.baseurl }}/js/jquery.mousewheel.min.js"></script>
+<!-- include carousel plugins -->
+<script src="{{ site.baseurl}}/js/jquery.tinycarousel.min.js"></script>
+<!-- include svg line drawing plugin -->
+<script src="{{ site.baseurl }}/js/jquery.lazylinepainter.min.js"></script>
+<!-- include custom script -->
+<script src="{{ site.baseurl }}/js/scripts.js"></script>
+<!-- Modernizr -->
+ <script src="{{ site.baseurl }}/js/modernizr.js"></script>
+
+    
+</body></html>

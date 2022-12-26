@@ -1,0 +1,117 @@
+---
+layout: page
+title: "Thailand"
+description: "No plan is the plan"
+active: gallery
+header-img: "img/galleries/backgrounds/DB9A0497_resized.webp"
+album-title: "Spontaneous Trips"
+images:
+ - image_path: /img/galleries/gallery02_thailand/20190910_172603_resized.webp
+   caption: Floating bungalow balcony
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery02_thailand/DB9A0135_resized.webp
+   caption: Slippery when wet
+   mfp-title: They just look slippery
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery02_thailand/DB9A0168_resized.webp
+   caption: Shroomin
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery02_thailand/DB9A0881_resized.webp
+   caption: Take a ride to the floating bungalows
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery02_thailand/DB9A0862_resized.webp
+   caption: Mexico in Thailand
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery02_thailand/DB9A0470_resized.webp
+   caption: Take a ride to the floating bungalows
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery02_thailand/IMG_20191007_134953_823_resized.webp
+   caption: Hotel, pool, and pond with a view all to myself
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery02_thailand/IMG_20191031_140823_451_resized.webp
+   caption: Three best friends
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery02_thailand/DB9A0555_resized.webp
+   caption: Hanging with the monks
+   copyright: © takophotos
+---
+
+<html class="no-js" lang="en">
+<head>
+	<meta content="charset=utf-8">
+</head>
+
+    <body>
+ 
+	<section id="content" role="main">
+		<div class="wrapper">
+	<br><br>
+			<h2>{{page.album-title}}</h2>
+
+
+			<!-- Gallery __-->
+			<div class="gallery masonry-gallery">
+		
+{% for image in page.images %}  		
+
+				<figure class="gallery-item">
+					<header class='gallery-icon'>
+
+<a href="{{ site.url }}{{ site.baseurl }}{{ image.image_path }}" class="popup" title="{{ image.caption }}" data-caption="{{ image.copyright }}">
+<img src="{{ site.url }}{{ site.baseurl }}{{ image.image_path }}"></a>
+						
+					</header>	
+					<figcaption class='gallery-caption'>
+						<div class="entry-summary">
+							<h3>{{image.caption}}</h3>
+							<p>{{image.copyright}}</p>
+						</div>
+					</figcaption>
+				</figure>
+				
+{% endfor %}
+
+			</div>
+
+		</div><!-- END .wrapper -->
+	</section>
+
+<!-- jQuery -->    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<!-- include image popups -->
+<script src="{{ site.baseurl }}/js/jquery.magnific-popup.js"></script>
+<script src="{{ site.baseurl }}/js/retina.min.js"></script>
+<!-- include Masonry -->
+<script src="{{ site.baseurl }}/js/isotope.pkgd.min.js"></script> 
+<!-- include mousewheel plugins -->
+<script src="{{ site.baseurl }}/js/jquery.mousewheel.min.js"></script>
+<!-- include carousel plugins -->
+<script src="{{ site.baseurl}}/js/jquery.tinycarousel.min.js"></script>
+<!-- include svg line drawing plugin -->
+<script src="{{ site.baseurl }}/js/jquery.lazylinepainter.min.js"></script>
+<!-- include custom script -->
+<script src="{{ site.baseurl }}/js/scripts.js"></script>
+<!-- Modernizr -->
+ <script src="{{ site.baseurl }}/js/modernizr.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function($) {
+        $('a.popup').magnificPopup({
+          type: 'image',
+	  gallery:{
+         enabled:true,
+         navigateByImgClick: true,
+         preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+       },
+      image: {
+         titleSrc: function(item) {
+             return item.el.attr('title') + '&nbsp;' + item.el.attr('data-caption');
+            }
+        }
+          // other options
+      });
+});
+    </script>
+
+</body></html>

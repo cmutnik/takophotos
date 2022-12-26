@@ -1,0 +1,48 @@
+---
+layout:     post
+title:      "Unbiased Wide Range Survey for RR Lyraes"
+subtitle:   "Mutnik & Hiramatsu"
+active: journal
+image:
+  feature: "pc010.webp"
+date:       "2022-12-26"
+header-img: "img/postcover/pc010.webp"
+tags: [tag01, tag02]
+categories: [cat01, cat02]
+comments: false
+gallery1: 
+  - image_path: /img/journal/astr301_final_paper/final_pg1_resized.webp
+    copyright: © takophotos
+  - image_path: /img/journal/astr301_final_paper/final_pg2_resized.webp
+    copyright: © takophotos
+  - image_path: /img/journal/astr301_final_paper/final_pg3_resized.webp
+    copyright: © takophotos
+  - image_path: /img/journal/astr301_final_paper/final_pg4_resized.webp
+    copyright: © takophotos
+  - image_path: /img/journal/astr301_final_paper/final_pg5_resized.webp
+    copyright: © takophotos
+  - image_path: /img/journal/astr301_final_paper/final_pg6_resized.webp
+    copyright: © takophotos
+  - image_path: /img/journal/astr301_final_paper/final_pg7_resized.webp
+    copyright: © takophotos
+  - image_path: /img/journal/astr301_final_paper/final_pg8_resized.webp
+    copyright: © takophotos
+  - image_path: /img/journal/astr301_final_paper/final_pg9_resized.webp
+    copyright: © takophotos
+---
+
+<html class="no-js" lang="en">
+<head>
+	<meta content="charset=utf-8">
+</head>
+
+    <body>
+
+<section id="content" role="main">
+		<div class="wrapper">
+	<br><br>
+			<h2>{{page.title}}</h2>
+
+<p>Scientific writing example can be found in <a href="https://github.com/cmutnik/ASTR301">my Observational Astronomy Repo</a>.</p>
+
+{% include subgallery.html id="gallery1" %}
