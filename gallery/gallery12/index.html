@@ -1,0 +1,186 @@
+---
+layout: page
+title: "New York"
+description: "More than just a city"
+active: gallery
+header-img: "img/galleries/backgrounds/DB9A4486_resized.webp"
+album-title: "Never Sleeps"
+images:
+ - image_path: /img/galleries/gallery12_ny/CT8A0581_HDR_resized.webp
+   caption: Deer Pine Chalet
+   mfp-title: Beautiful cabin in the woods
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery12_ny/CT8A0926_resized.webp
+   caption: Stalactites
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery07_main_land/DB9A9661_resized.webp
+   caption: NY sunset
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery12_ny/GC6A8637_resized.webp
+   caption: Taking a peek
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery12_ny/CT8A0995_luminar_resized.webp
+   caption: The Wild Center
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery12_ny/CT8A1004_resized.webp
+   caption: Swinging bridge
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery12_ny/GC6A8680_resized.webp
+   caption: Stunned
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery12_ny/CT8A1016_resized.webp
+   caption: Follow the path
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery12_ny/CT8A1030_resized.webp
+   caption: Sunset over the lake
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery12_ny/CT8A1039_resized.webp
+   caption: Looking up
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery12_ny/DB9A4590_luminar_resized.webp
+   caption: City view
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery12_ny/CT8A0895_HDR_luminar_cold_dramatic_vin_resized.webp
+   caption: Jump in
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery12_ny/CT8A0847_HDR_luminar_resized.webp
+   caption: Full view of the gorge
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery12_ny/CT8A0814_HDR_luminar_resized.webp
+   caption: Frozen falls
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery12_ny/CT8A0692_resized.webp
+   caption: Spooky stuff
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery04_waterfalls/DB9A9566_resized.webp
+   caption: NY falls
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery07_main_land/DB9A4486_resized.webp
+   caption: NY from NJ
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery12_ny/CT8A0929_luminar_bnw_resized.webp
+   caption: So moody
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery12_ny/GC6A6393_resized.webp
+   caption: Tourist style
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery12_ny/CT8A0981_resized.webp
+   caption: True winter
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery12_ny/GC6A6444_resized.webp
+   caption: Guess where
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery12_ny/GC6A6716_resized.webp
+   caption: Actually NY
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery12_ny/GC6A6664_resized.webp
+   caption: Clear skies
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery12_ny/GC6A6652_resized.webp
+   caption: Bronx
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery12_ny/GC6A6599_resized.webp
+   caption: Indoors
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery12_ny/GC6A8499_resized.webp
+   caption: Wine-o-clock
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery12_ny/GC6A8508_resized.webp
+   caption: More barrels
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery07_main_land/DB9A9153_resized.webp
+   caption: Mossy-boi
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery12_ny/GC6A8597_resized.webp
+   caption: Moo...
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery12_ny/GC6A8646_resized.webp
+   caption: ...moo-moo
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery12_ny/GC6A6683_resized.webp
+   caption: Almost tropical
+   copyright: © takophotos
+ - image_path: /img/galleries/gallery12_ny/pc003_resized.webp
+   caption: Cityscape
+   copyright: © takophotos
+---
+
+<html class="no-js" lang="en">
+<head>
+	<meta content="charset=utf-8">
+</head>
+
+    <body>
+ 
+	<section id="content" role="main">
+		<div class="wrapper">
+	<br><br>
+			<h2>{{page.album-title}}</h2>
+
+
+			<!-- Gallery __-->
+			<div class="gallery masonry-gallery">
+		
+{% for image in page.images %}  		
+
+				<figure class="gallery-item">
+					<header class='gallery-icon'>
+
+<a href="{{ site.url }}{{ site.baseurl }}{{ image.image_path }}" class="popup" title="{{ image.caption }}" data-caption="{{ image.copyright }}">
+<img src="{{ site.url }}{{ site.baseurl }}{{ image.image_path }}"></a>
+						
+					</header>	
+					<figcaption class='gallery-caption'>
+						<div class="entry-summary">
+							<h3>{{image.caption}}</h3>
+							<p>{{image.copyright}}</p>
+						</div>
+					</figcaption>
+				</figure>
+				
+{% endfor %}
+
+			</div>
+
+		</div><!-- END .wrapper -->
+	</section>
+
+<!-- jQuery -->    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<!-- include image popups -->
+<script src="{{ site.baseurl }}/js/jquery.magnific-popup.js"></script>
+<script src="{{ site.baseurl }}/js/retina.min.js"></script>
+<!-- include Masonry -->
+<script src="{{ site.baseurl }}/js/isotope.pkgd.min.js"></script> 
+<!-- include mousewheel plugins -->
+<script src="{{ site.baseurl }}/js/jquery.mousewheel.min.js"></script>
+<!-- include carousel plugins -->
+<script src="{{ site.baseurl}}/js/jquery.tinycarousel.min.js"></script>
+<!-- include svg line drawing plugin -->
+<script src="{{ site.baseurl }}/js/jquery.lazylinepainter.min.js"></script>
+<!-- include custom script -->
+<script src="{{ site.baseurl }}/js/scripts.js"></script>
+<!-- Modernizr -->
+ <script src="{{ site.baseurl }}/js/modernizr.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function($) {
+        $('a.popup').magnificPopup({
+          type: 'image',
+	  gallery:{
+         enabled:true,
+         navigateByImgClick: true,
+         preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+       },
+      image: {
+         titleSrc: function(item) {
+              return item.el.attr('title') + '&nbsp;' + item.el.attr('data-caption');
+            }
+        }
+          // other options
+      });
+});
+    </script>
+
+</body></html>
